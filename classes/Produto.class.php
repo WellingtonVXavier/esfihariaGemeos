@@ -12,7 +12,7 @@ class produto
 
         if ($mostra->rowCount() > 0) {
             while ($linha = $mostra->fetch(PDO::FETCH_ASSOC)) {
-?>
+                ?>
                 <tr>
                     <td class="text-center align-middle">
                         <?php echo $linha['Id']; ?>
@@ -31,11 +31,12 @@ class produto
                     </td>
 
                     <td class="text-center align-middle">
-                        <img src="../imagens/<?php echo $linha['imagem']; ?>" width="200" height="100" class="rounded">
+                        <img src="../imagens/<?php echo $linha['imagens']; ?>" width="200" height="100" class="rounded">
                     </td>
 
                     <td class="text-center align-middle">
-                        <a href="altera-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip" data-placement="right" title="Alterar" class="btn btn-primary btn-sm">
+                        <a href="altera-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip" data-placement="right"
+                            title="Alterar" class="btn btn-primary btn-sm">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
                     </td>
@@ -43,21 +44,23 @@ class produto
                     <!-- If para o status do pedido -->
                     <?php
                     if ($linha['Ativo'] == 1) {
-                    ?>
+                        ?>
                         <td class="text-center align-middle">
-                            <a href="desativa-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip" data-placement="right" title="Ativado, deseja desativar?" class="btn btn-primary btn-sm">
+                            <a href="desativa-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip"
+                                data-placement="right" title="Ativado, deseja desativar?" class="btn btn-primary btn-sm">
                                 <i class="fa-solid fa-check"></i>
                             </a>
                         </td>
-                    <?php
+                        <?php
                     } else {
-                    ?>
+                        ?>
                         <td class="text-center align-middle">
-                            <a href="ativa-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip" data-placement="right" title="Desativado, deseja ativar?" class="btn btn-danger btn-sm">
+                            <a href="ativa-produto.php?id_produto=<?php echo $linha['Id']; ?>" data-toggle="tooltip" data-placement="right"
+                                title="Desativado, deseja ativar?" class="btn btn-danger btn-sm">
                                 <i class="fa-sharp fa-solid fa-xmark"></i>
                             </a>
                         </td>
-                    <?php
+                        <?php
                     }
                     ?>
                     <td class="text-center align-middle">
@@ -70,7 +73,7 @@ class produto
                             <i class="fa-solid fa-trash"></i>
                         </a> -->
                 </tr>
-            <?php
+                <?php
             }
         } else {
             ?>
@@ -79,7 +82,7 @@ class produto
                     <h5>Não há registros!</h5>
                 </td>
             </tr>
-<?php
+            <?php
         }
     }
 

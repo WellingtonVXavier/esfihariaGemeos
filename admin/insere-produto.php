@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
-    $foto = $_FILES['imagem']['name'];
+    $foto = $_FILES['imagens']['name'];
 
     if (empty($nome) || empty($descricao) || empty($valor) || empty($foto)) {
         $_SESSION['mensagem'] = 'Preencha todos os campos!';

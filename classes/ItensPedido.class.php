@@ -22,7 +22,7 @@ class ItemPedido
 
         if ($mostra->rowCount() > 0) {
             while ($linha = $mostra->fetch(PDO::FETCH_ASSOC)) {
-?>
+                ?>
                 <tr>
                     <td class="text-center align-middle">
                         <?php echo $linha['id_pessoa']; ?>
@@ -48,7 +48,7 @@ class ItemPedido
                         <img src="img_peq/<?php echo $linha['foto']; ?>">
                     </td>
                 </tr>
-            <?php
+                <?php
             }
         } else {
             ?>
@@ -57,7 +57,7 @@ class ItemPedido
                     <h5>Não há registros!</h5>
                 </td>
             </tr>
-<?php
+            <?php
         }
     }
 

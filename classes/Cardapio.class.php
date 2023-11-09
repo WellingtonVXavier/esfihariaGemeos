@@ -26,7 +26,7 @@ class cardapio
                                     <p class="card-text"><?php echo $linha['Descricao'] ?></p>
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="imagens/<?php echo $linha['imagem'] ?>" alt="<?php echo $linha['Nome']?>" width="200" height="100" class="rounded">
+                                    <img src="imagens/<?php echo $linha['imagens'] ?>" alt="<?php echo $linha['Nome']?>" width="200" height="100" class="rounded">
                                 </div>
                                 </div>
                             </div>
